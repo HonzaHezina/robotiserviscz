@@ -12,6 +12,13 @@
 
   <div class="bg-orb orb-1" aria-hidden="true"></div>
   <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="particles" aria-hidden="true"></div>
+
+  <div class="flying-robot" aria-hidden="true">
+    <div class="robot-eye eye-left"></div>
+    <div class="robot-eye eye-right"></div>
+    <div class="robot-antena"></div>
+  </div>
 
   <header class="site-header">
     <div class="container nav-wrap">
@@ -32,7 +39,7 @@
         <div data-reveal>
           <p class="eyebrow">Rychlý servis po celé ČR</p>
           <h1>Profesionální servis robotů bez starostí</h1>
-          <p class="lead">Opravujeme robotické vysavače, sekačky a další domácí roboty. Diagnostiku zvládneme do 48 hodin a předem vám pošleme jasnou cenovou nabídku.</p>
+          <p class="lead typewriter" data-text="Opravujeme robotické vysavače, sekačky a další domácí roboty. Diagnostiku zvládneme do 48 hodin a předem vám pošleme jasnou cenovou nabídku."></p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#kontakt">Objednat servis</a>
             <a class="btn btn-secondary" href="#sluzby">Zjistit více</a>
@@ -59,16 +66,22 @@
     <section id="sluzby" class="section">
       <div class="container" data-reveal>
         <h2>Naše služby</h2>
+        <div class="service-filter" role="tablist" aria-label="Typ servisu">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Vše</button>
+          <button class="filter-btn" data-filter="vacuum" role="tab" aria-selected="false">Vysavače</button>
+          <button class="filter-btn" data-filter="mower" role="tab" aria-selected="false">Sekačky</button>
+          <button class="filter-btn" data-filter="diagnostic" role="tab" aria-selected="false">Diagnostika</button>
+        </div>
         <div class="cards">
-          <article class="card tilt" data-reveal>
+          <article class="card tilt" data-reveal data-kind="vacuum">
             <h3>Robotické vysavače</h3>
             <p>Výměna baterií, opravy motorů, senzorů, kol a základních desek. Čištění po poškození prachem a vlhkostí.</p>
           </article>
-          <article class="card tilt" data-reveal>
+          <article class="card tilt" data-reveal data-kind="mower">
             <h3>Robotické sekačky</h3>
             <p>Servis po sezóně, opravy nabíjecích stanic, nožových systémů, pojezdů a aktualizace softwaru.</p>
           </article>
-          <article class="card tilt" data-reveal>
+          <article class="card tilt" data-reveal data-kind="diagnostic">
             <h3>Diagnostika a údržba</h3>
             <p>Preventivní prohlídky, kalibrace, čištění a test funkčnosti. Pomáháme prodloužit životnost zařízení.</p>
           </article>
